@@ -1,0 +1,35 @@
+{% load static %}
+
+<footer class="footer text-center">
+    <div class="container-flex">
+        <ul class="list-inline pt-4" style="background-color: #00838F;">
+            <li class="list-inline-item mx-3">
+                <a aria-label="Twitter" class="social-link rounded-circle mr-3 text-white" href=""><i
+                        class="fab fa-twitter fa-2x"></i></a>
+            </li>
+
+            <li class="list-inline-item mx-3">
+                <a aria-label="Instagram" class="social-link rounded-circle mr-3 text-white" href=""><i
+                        class="fab fa-instagram fa-2x"></i></a>
+            </li>
+
+            <li class="list-inline-item mb-3 mx-3">
+                <a aria-label="Facebook" class="social-link rounded-circle text-white" href=""><i
+                        class="fab fa-facebook-f fa-2x"></i></i></a>
+            </li>
+
+            <p class="text-white small pt-4 pb-4" style="background-color: #006972;">Copyright &copy; Francky Castell
+            </p>
+        </ul>
+    </div>
+</footer>
+
+<!--JS BOOTSTRAP-->
+<script src="{% static 'Core/js/bootstrap.min.js'%}"></script>
+
+<!-- OWN JS -->
+<script src="{% static 'Core/js/app.js'%}"></script>
+
+<!-- CDN FULLCALENDAR.IO 'JAVASCRIPT FILE' -->
+<script src="{% static 'Core/lib/main.min.js'%}"> </script>
+<script src="{% static 'Core/lib/locales-all.min.js'%}"> </script>

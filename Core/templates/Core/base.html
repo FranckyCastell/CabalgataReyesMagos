@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!--TITLE-->
+    {% block title %} {% endblock %}
+
+    <!--META'S-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="FranckyCastell">
+    <meta name="description" content="Cabalgata Menorca">
+
+    <!--FAVICON-->
+    <link rel="icon" type="image/png" href="{% static 'Core/assets/crown.png'%}">
+
+    <!--CDN BOOTSTRAP-->
+    <link rel="stylesheet" href="{% static 'Core/css/bootstrap.min.css'%}" />
+
+    <!--ICONS BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
+    <!--ICONS FONTAWESOME-->
+    <script src="https://kit.fontawesome.com/727ffcfd8d.js" crossorigin="anonymous"></script>
+
+    <!-- CDN FULLCALENDAR.IO 'CSS FILE' -->
+    <link rel="stylesheet" href="{% static 'Core/lib/main.min.css'%}">
+
+    <!--OWN CSS-->
+    <link rel="stylesheet" href="{% static 'Core/css/styles.css'%}" />
+</head>
+
+<body>
+
+    <!-- NAV TEMPLATE  -->
+    {% include "Core/nav.html" %}
+    <!-- END NAV TEMPLATE  -->
+
+
+    <!-- HEADER TEMPLATE  -->
+    {% include "Core/header.html" %}
+    <!-- END HEADER TEMPLATE  -->
+
+
+    <!-- MAIN TEMPLATE  -->
+    {% block content %}
+    {% endblock %}
+    <!-- END MAIN TEMPLATE  -->
+
+
+    <!-- FOOTER TEMPLATE  -->
+    {% include "Core/footer.html" %}
+    <!-- END FOOTER TEMPLATE  -->
+
+</body>
+
+</html>
