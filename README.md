@@ -1,6 +1,6 @@
 # Cabalgata de los Reyes Magos
 
-_Este proyecto consiste en visualizar por donde pasara la Cabalgata de los Reyes Magos en las distintas Ciudades de Menorca, para realizar un seguimiento y saber en todo momento por donde andan_
+_Este proyecto consiste en visualizar por donde pasara la Cabalgata de los Reyes Magos en las distintas Ciudades de Menorca, para realizar un seguimiento y saber en todo momento por donde andan._
 
 ## Comenzando 🚀
 
