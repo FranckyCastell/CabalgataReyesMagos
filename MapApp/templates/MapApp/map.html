@@ -2,16 +2,48 @@
 
 {% load static %}
 
-{% block title %} <title> MAP </title> {% endblock %}
+{% block title %} <title> Cabalgata Reis Macs </title> {% endblock %}
 
 {% block content %}
 
 <main class="container">
-    
-    <section class="row">
-        <p>Calendar</p>
-    </section>
-    
+    <div class="row mt-5 mx-5">
+        <!-- CITIE SECTION -->
+        <section class="col-lg-6 col-sm-12 mt-5">
+            <div>
+                <h1 class="fw-bold display-4"> Ciutadella </h1>
+                <p class="lead">Ciutadella de Menorca</p>
+            </div>
+
+            <div>
+                <a type="button" class="btn btn-success pt-3 pb-3 px-4" href="" download="name">Descargar Mapa</a>
+            </div>
+
+            <div>
+                <p class="mt-5 mb-4 lead">Per on passara ?</p>
+                <p>ruta</p>
+            </div>
+        </section>
+        <!-- END CITIE SECTION -->
+
+
+        <!-- MAP SECTION -->
+        <section class="col-lg-6 col-sm-12 mt-5">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d25118.61245155084!2d3.839635788960142!3d40.00270597439485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2ses!4v1639386388062!5m2!1ses!2ses"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-3"></iframe>
+        </section>
+        <!-- END MAP SECTION -->
+    </div>
+
+
+    <div class="row">
+        <!-- CALENDAR SECTION -->
+        <section>
+
+        </section>
+        <!-- END CALENDAR SECTION -->
+    </div>
 </main>
 
 {% endblock %}
