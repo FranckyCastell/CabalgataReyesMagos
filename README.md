@@ -1,6 +1,6 @@
-# Título del Proyecto
+# Cabalgata de los Reyes Magos
 
-_Acá va un párrafo que describa lo que es el proyecto_
+_Este proyecto consiste en visualizar por donde pasara la Cabalgata de los Reyes Magos en las distintas Ciudades de Menorca, para realizar un seguimiento y saber en todo momento por donde andan_
 
 ## Comenzando 🚀
 
@@ -58,7 +58,7 @@ python3 manage.py check --deploy
 
 ## Autores ✒️
 
-* **Francesc Castell Portella** - *Trabajo Inicial* - [franckycastell](https://github.com/franckycastell)
+* **Francesc Castell Portella** - *Trabajo Inicial - Documentación* - [franckycastell](https://github.com/franckycastell)
 
 ## Licencia 📄
 
