@@ -27,25 +27,29 @@ git clone https://github.com/FranckyCastell/CabalgataReyesMagos.git
 _Instalando las Dependencias_
 
 ```
-pip3 install -r requeriments.txt
+pip3 install -r requirements.txt
 ```
 
 _Realizando Migraciones (nos dirigimos dentro de la carpeta)_
 
 ```
-python manage.py migrate
+python3 manage.py migrate
 ```
 
 _Ejecutando el Proyecto_
 
 ```
-python manage.py runserver
+python3 manage.py runserver
 ```
 
 
 ## Despliegue 📦
 
-_Agrega notas adicionales sobre como hacer deploy_
+_Descubrir si el proyecto tiene vulnerabilidades con el despliegue
+
+```
+python3 manage.py check --deploy
+```
 
 ## Construido con 🛠️
 
