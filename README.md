@@ -24,10 +24,16 @@ _Clonando el repositorio_
 git clone https://github.com/FranckyCastell/CabalgataReyesMagos.git
 ```
 
-_Y repite_
+_Realizando Migraciones_
 
 ```
-hasta finalizar
+python manage.py migrate
+```
+
+_Ejecutando el Proyecto_
+
+```
+python manage.py runserver
 ```
 
 _Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
