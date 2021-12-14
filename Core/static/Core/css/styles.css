@@ -14,3 +14,9 @@ p,
 .myText {
   font-family: "Readex Pro", sans-serif;
 }
+
+hr {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  border-top: 1px solid rgb(0, 128, 0);
+}

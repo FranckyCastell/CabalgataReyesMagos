@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import tree
 
 # Create your models here.
 
@@ -25,6 +26,9 @@ class Cities (models.Model):
 
 
 class Event (models.Model):
+    citie = models.ForeignKey(
+        Cities, verbose_name='Ciudad', null=True, blank=True, on_delete=models.CASCADE)
+
     title = models.CharField(verbose_name='Títol',
                              max_length=50, blank=True, null=True)
 

@@ -7,21 +7,22 @@
 {% block content %}
 
 <main class="container">
-    <div class="row mt-5 mx-5">
+    <div class="row mt-5 mx-5 mb-5">
         <!-- CITIE SECTION -->
         <section class="col-lg-6 col-sm-12 mt-5">
             <div>
-                <h1 class="fw-bold display-4"> Ciutadella </h1>
-                <p class="lead">Ciutadella de Menorca</p>
+                <h1 class="fw-bold display-4"> {% for city in cities %} {{city.name}} {% endfor %} </h1>
+                <p class="lead">{% for citi in cities %} {{citi.allName}} {% endfor %}</p>
             </div>
 
             <div>
-                <a type="button" class="btn btn-success pt-3 pb-3 px-4" href="" download="name">Descargar Mapa</a>
+                <a type="button" class="btn btn-success pt-3 pb-3 px-4"
+                    href="{% for city in cities %} {{city.descargar}} {% endfor %}" download="name">Descargar Mapa</a>
             </div>
 
             <div>
-                <p class="mt-5 mb-4 lead">Per on passara ?</p>
-                <p>ruta</p>
+                <p class="mt-5 mb-4 lead fw-bold">Per on passara ?</p>
+                <p>{% for city in cities %} {{city.route}} {% endfor %}</p>
             </div>
         </section>
         <!-- END CITIE SECTION -->
@@ -36,14 +37,84 @@
         <!-- END MAP SECTION -->
     </div>
 
+    <hr class="mx-5">
 
-    <div class="row">
+    <div class="row mt-5 mb-5">
         <!-- CALENDAR SECTION -->
         <section>
-
+            <div id='calendar' class="col-12 text-dark card pt-4 px-4 pb-4">
+            </div>
         </section>
         <!-- END CALENDAR SECTION -->
     </div>
+
+    <!-- SCRIPT FULLCALENDAR -->
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+
+                timeZone: 'local',
+
+                locale: 'es',
+
+                themeSystem: 'bootstrapFontAwesome',
+
+                initialView: 'listWeek',
+
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+                },
+
+                titleFormat: {
+                    year: 'numeric', month: 'long'
+                },
+
+                buttonText: {
+                    today: 'Hoy',
+                    month: 'Mes',
+                    week: 'Semana',
+                    day: 'Día',
+                    list: 'Lista'
+                },
+
+                height: 600,
+
+                nowIndicator: true,
+
+                selectable: true,
+
+                navLinks: true,
+
+                eventBackgroundColor: '#ffa500',
+
+                events: [
+
+                    {% for event in events %}
+                    
+                        {
+                    title: '{{event.title}}',
+                    start: '{{event.start}}',
+                    end: '{{event.end}}',
+                    url: '{{event.url}}',
+                    classNames: ['lead']
+                },
+
+                {% endfor %}
+                ],
+                
+            });
+        calendar.render();
+        });
+
+    </script>
+
+    <!-- END SCRIPT FULLCALENDAR -->
 </main>
 
 {% endblock %}

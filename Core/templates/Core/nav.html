@@ -1,8 +1,8 @@
 {% load static %}
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark pt-2 pb-2">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Cabalgata Reis Macs</a>
+        <a class="navbar-brand" href="{% url 'default' %}">Cabalgata Reis Macs</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
             aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse" id="navbarColor02">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Home
+                    <a class="nav-link active" href="{% url 'default' %}">Home
                         <span class="visually-hidden">(current)</span>
                     </a>
                 </li>
@@ -19,11 +19,11 @@
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                         aria-haspopup="true" aria-expanded="false">Pobles</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Ciutadella</a>
-                        <a class="dropdown-item" href="#">Ferreries</a>
-                        <a class="dropdown-item" href="#">Mercadal</a>
-                        <a class="dropdown-item" href="#">Alaior</a>
-                        <a class="dropdown-item" href="#">Maó</a>
+                        <a class="dropdown-item" href="/ciudad/1">Ciutadella</a>
+                        <a class="dropdown-item" href="/ciudad/2">Ferreries</a>
+                        <a class="dropdown-item" href="/ciudad/3">Mercadal</a>
+                        <a class="dropdown-item" href="/ciudad/4">Alaior</a>
+                        <a class="dropdown-item" href="/ciudad/5">Maó</a>
                     </div>
                 </li>
                 <li class="nav-item">
