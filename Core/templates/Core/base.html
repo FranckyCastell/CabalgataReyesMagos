@@ -8,8 +8,7 @@
     {% block title %} {% endblock %}
 
     <!--META'S-->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximumscale=1.0, user-scalable=no" />
     <meta name="author" content="FranckyCastell">
     <meta name="description" content="Cabalgata Menorca">
 
@@ -27,6 +26,12 @@
 
     <!-- CDN FULLCALENDAR.IO 'CSS FILE' -->
     <link rel="stylesheet" href="{% static 'Core/lib/main.min.css'%}">
+
+    <!-- CDN LEAFLET 'CSS FILE' -->
+    <link rel="stylesheet" href="{% static 'Core/lib/leaflet.css'%}" />
+
+    <!-- CDN LEAFLET 'JAVASCRIPT FILE' -->
+    <script src="{% static 'Core/lib/leaflet.js'%}"></script>
 
     <!--OWN CSS-->
     <link rel="stylesheet" href="{% static 'Core/css/styles.css'%}" />

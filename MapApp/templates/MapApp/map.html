@@ -29,10 +29,9 @@
 
 
         <!-- MAP SECTION -->
-        <section class="col-lg-6 col-sm-12 mt-5">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d25118.61245155084!2d3.839635788960142!3d40.00270597439485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2ses!4v1639386388062!5m2!1ses!2ses"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-3"></iframe>
+        <section class="row col-lg-6 col-sm-12 mt-5">
+            <span style="width:600px; height: 400px;"><div id="map" style="height: 100%;"></div></span>
+
         </section>
         <!-- END MAP SECTION -->
     </div>
@@ -42,16 +41,24 @@
     <div class="row mt-5 mb-5">
         <!-- CALENDAR SECTION -->
         <section>
-            <div id='calendar' class="col-12 text-dark card pt-4 px-4 pb-4">
+            <div id='calendar' class="col-12 text-dark card pt-4 px-4 pb-4"> 
             </div>
         </section>
         <!-- END CALENDAR SECTION -->
     </div>
 
-    <!-- SCRIPT FULLCALENDAR -->
-
+    <!-- SCRIPT LEAFLET -->
     <script>
+        var map = L.map('map', { center: [42.4624, -6.2073], zoom: 11 });
 
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(map);
+
+        omnivore.gpx('frances-21-astorga-foncebadon.gpx').addTo(map);   
+    </script>
+    <!-- SCRIPT END LEAFLET -->
+
+    <!-- SCRIPT FULLCALENDAR -->
+    <script>
         document.addEventListener('DOMContentLoaded', function () {
             var calendarEl = document.getElementById('calendar');
 
@@ -66,9 +73,9 @@
                 initialView: 'listWeek',
 
                 headerToolbar: {
-                    left: 'prev,next today',
+                    left: '',
                     center: 'title',
-                    right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+                    right: ''
                 },
 
                 titleFormat: {
@@ -113,7 +120,6 @@
         });
 
     </script>
-
     <!-- END SCRIPT FULLCALENDAR -->
 </main>
 
